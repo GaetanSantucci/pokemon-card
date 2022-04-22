@@ -1,10 +1,11 @@
 const express = require("express");
 const router = express.Router();
-// const { getAllPokemon, getAllTrainer } = require("./controllers/mainController");
+const { getAllPokemon } = require("./controllers/mainController");
 
-router.get("/", (req, res) => {
+router.get("/", (req, res) => { 
+    
     res.render("pages/home");
 });
-// router.get("/pokemon", getAllPokemon);
+router.get("/pokemon", getAllPokemon);
 
 module.exports = router;

@@ -1,5 +1,5 @@
 //! 1. require le module
-const { Client } = require('pg');
+const { Client } = require("pg");
 
 
 //! 2. Créer un client

@@ -1,9 +1,10 @@
 const { fecthAllTrainer, fecthAllPokemon } = require("../data/dataMapper");
 
-// async function getAllTrainer(req, res) {
-//     const allTrainer = await fecthAllTrainer();
-//     res.render("pages/home", { allTrainer });
-// }
+async function getAllTrainer(req, res) {
+    const allTrainer = await fecthAllTrainer();
+
+    res.render("pages/home", { allTrainer });
+}
 
 async function getAllPokemon(req, res) {
     const allPokemon = await fecthAllPokemon();

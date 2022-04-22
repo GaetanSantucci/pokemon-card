@@ -58,8 +58,14 @@ CREATE TABLE stored_pokemon (
 	pokemon_level INT
 );
 
+CREATE TABLE log (
+	id SERIAL PRIMARY KEY,
+	url VARCHAR(255),
+	ip VARCHAR(255),
+	time TIMESTAMP
+);
 
-
+INSERT INTO log (id, url, ip, time) VALUES(${i}, '${url}', '${ip}', TO_TIMESTAMP(NOW(), 'YYYY-MM-DD HH24:MI:SS'))
 -- POPULATE TABLES --
 
 
