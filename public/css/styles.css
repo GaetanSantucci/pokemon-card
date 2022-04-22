@@ -2,12 +2,150 @@
 /* ****** ASSET ******* */
 /* ******************** */
 
+@font-face {
+  font-family: "pretendo";
+  src: url('/fonts/Pretendo.ttf') format('truetype');
+}
 
+html{
+  --color-black: #000000;
+  --color-purple: #5800FF;
+  --color-pink: #E900FF;
+  --color-yellow: #FFC600;
+  --color-white: #ffffff;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-black);
+  font-family: "pretendo";
+  color: var(--color-yellow);
+}
+
+.background{
+  min-height: 100%;
+  min-width: 1920px;
+  z-index: -1;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
 
 /* ******************** */
 /* ****** HEADER ****** */
 /* ******************** */
 
+.header-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+.toggle-menu {
+  width: 20%;
+  position: absolute;
+  z-index: 0;
+  display: none;
+  left: 5%;
+  top: 2.5%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-dark-o);
+}
+
+.toggle-click{
+  z-index: 1;
+  display: flex;
+}
+
+.toggle-menu a {
+  width: 100%;
+  text-align: center;
+  color: var(--color-white);
+  font-size: 1.8rem;
+  text-decoration: none;
+  margin-top: 1.5%;
+  margin-left: 1.4%;
+  padding: 2rem 3rem;
+}
+
+.ham {
+  margin-left: 2rem;
+  z-index: 2;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 400ms;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+}
+.hamRotate.active {
+  transform: rotate(45deg);
+}
+.hamRotate180.active {
+  transform: rotate(180deg);
+}
+.line {
+  fill: none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke: rgb(255, 255, 255);
+  stroke-width: 5.5;
+  stroke-linecap: round;
+}
+
+.ham7 .top {
+  stroke-dasharray: 40 82;
+}
+.ham7 .middle {
+  stroke-dasharray: 40 111;
+}
+.ham7 .bottom {
+  stroke-dasharray: 40 161;
+}
+.ham7.active .top {
+  stroke-dasharray: 17 82;
+  stroke-dashoffset: -62px;
+}
+.ham7.active .middle {
+  stroke-dashoffset: 23px;
+}
+.ham7.active .bottom {
+  stroke-dashoffset: -83px;
+}
+
+.header-menu {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+  margin: 2rem;
+}
+
+.header-title-container{
+  margin-top: 5%;
+  margin-left: 7%;
+  width: 40%;
+  text-align: center;
+  display: flex;
+  justify-content: start;
+}
+
+.header-title{
+  font-size: 4rem;
+  letter-spacing: 1rem;
+}
 
 
 /* ******************** */
