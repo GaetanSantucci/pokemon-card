@@ -5,6 +5,7 @@ const database = require("./database");
 async function fecthAllTrainer() {
     try {
         const result = await database.query(`SELECT * FROM trainer`);
+        
         return result.rows;
     } catch (error) {
         res.status(500).send("error database");
@@ -14,10 +15,21 @@ async function fecthAllTrainer() {
 async function fecthAllPokemon(){
     try{
       const result = await database.query(`SELECT * FROM pokemon`);
+      
       return result.rows;
     }catch(error){
       res.status(500).send("error database")
     }
+}
+
+async function fecthOnePokemon(id){
+  try{
+    const result = await database.query(`SELECT * FROM pokemon WHERE id = $1`, [id]);
+    console.log(result.rows[0]);
+    return result.rows[0];
+  }catch(error){
+    res.status(500).send("error database")
+  }
 }
 
 async function insertLog(id, url, time, ip){
@@ -28,4 +40,4 @@ async function insertLog(id, url, time, ip){
   }
 }
 
-module.exports = { fecthAllTrainer, fecthAllPokemon, insertLog };
+module.exports = { fecthAllTrainer, fecthAllPokemon, fecthOnePokemon, insertLog };

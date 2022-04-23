@@ -1,0 +1,28 @@
+<%- include('../partials/header-onePokemon.ejs') %>
+
+<main id="main">
+    <div class="card">
+        <img
+            class="card-img"
+            src="/images/<%= onePokemon.image %>.png"
+            alt="<%= onePokemon.name %>_card"
+        />
+
+        <div class="red"></div>
+        <div class="down">
+            <div class="middle">
+                <div class="left"></div>
+                <div class="center"></div>
+                <div class="right"></div>
+            </div>
+            <div class="white">
+                <h2 class="card-name"><%= onePokemon.name %></h2>
+
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="/script/menuToggle.js" async></script>
+
+<%- include('../partials/footer.ejs') %>

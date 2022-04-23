@@ -1,0 +1,146 @@
+/* ******************** */
+/* ****** ASSET ******* */
+/* ******************** */
+
+@font-face {
+    font-family: "pretendo";
+    src: url("/fonts/Pretendo.ttf") format("truetype");
+}
+
+html {
+    --color-black: #000000;
+    --color-purple: #5800ff;
+    --color-pink: #e900ff;
+    --color-yellow: #ffc600;
+    --color-white: #ffffff;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-black);
+    font-family: "pretendo";
+    color: var(--color-yellow);
+}
+
+/* ******************** */
+/* ****** HEADER ****** */
+/* ******************** */
+
+.card {
+  margin-top: -2%;
+    background-color: transparent;
+    width: 420px;
+    border: none;
+}
+
+.card:hover {
+    animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+@keyframes shake {
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+
+.card-img {
+    position: absolute;
+    z-index: -1;
+    background-color: transparent;
+    border: none;
+}
+
+.red {
+    width: 100%;
+    height: 200px;
+    margin-bottom: -26px;
+    background-color: red;
+    border-top-left-radius: 50rem;
+    border-top-right-radius: 50rem;
+    border: 3px solid var(--color-black);
+    display: flex;
+    justify-content: center;
+}
+
+.down {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.white {
+    width: 100%;
+    height: 200px;
+    margin-top: -26px;
+    background-color: white;
+    border-bottom-left-radius: 50rem;
+    border-bottom-right-radius: 50rem;
+    border: 5px solid var(--color-black);
+}
+
+.middle {
+    z-index: 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center {
+    width: 150px;
+    border: 5px solid var(--color-black);
+    height: 40px;
+    background-color: var(--color-white);
+    border-radius: 100rem;
+}
+
+.left,
+.right {
+    width: 100%;
+}
+
+.card-name {
+    margin-top: 17%;
+    text-align: center;
+}
+
+.open-up {
+    transform: translatey(-210px);
+    transition: linear 1s;
+    opacity: 0;
+}
+
+.open-down {
+    transform: translateY(60px);
+    transition: linear 0.6s;
+}
+
+.apparition {
+    z-index: 0;
+    /* transform: translateY(-10px); */
+    transition: 0.5s;
+}

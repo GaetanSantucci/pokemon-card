@@ -5,14 +5,14 @@
 
   <% allPokemon.forEach(pokemon => { %>
 
-  <div class="card">
+  <a href="/pokemon/<%= pokemon.id %>" class="card">
     <img class="card-img" src="/images/<%= pokemon.image %>.png" alt="<%= pokemon.name %>_card">
     <h2 class="card-name"><%= pokemon.name %></h2>
     <div class="card-description">
-      <div class="card-description-number">Card Number: <%= pokemon.id %></div>
+      <div class="card-description-number">Card number :<%= pokemon.id %></div>
       <div class="card-description-type">Type: Electric</div>
     </div>
-  </div>
+  </a>
   <% }) %>
 </main>
 

@@ -59,13 +59,13 @@ CREATE TABLE stored_pokemon (
 );
 
 CREATE TABLE log (
-	id SERIAL PRIMARY KEY,
+	id SERIAL PRIMARY KEY NOT NULL,
 	url VARCHAR(255),
 	ip VARCHAR(255),
 	time TIMESTAMP
 );
 
-INSERT INTO log (id, url, ip, time) VALUES(${i}, '${url}', '${ip}', TO_TIMESTAMP(NOW(), 'YYYY-MM-DD HH24:MI:SS'))
+
 -- POPULATE TABLES --
 
 
